@@ -1,0 +1,45 @@
+{
+  "nerd": {
+    "right_index_on_nose": true
+  },
+  "smart": {
+    "index_fingers_touching": true
+  },
+  "inspecting": {
+    "right_pinching_eye": true
+  },
+  "malicious": {
+    "is_smiling": true,
+    "hands_rubbing": true
+  },
+  "furious": {
+    "is_mouth_open": true,
+    "left_is_fist": true,
+    "right_is_fist": true
+  },
+  "angry": {
+    "is_mouth_open": false,
+    "left_is_fist": true,
+    "right_is_fist": true
+  },
+  "ragebaiting": {
+    "is_mouth_open": true,
+    "left_is_open": true,
+    "right_is_open": true
+  },
+  "handsign": {
+    "right_ok_sign": true
+  },
+  "lollipop": {
+    "is_mouth_open": true,
+    "right_fist_near_mouth": true
+  },
+  "happy_2": {
+    "is_smiling": true,
+    "is_mouth_open": true
+  },
+  "happy": {
+    "is_smiling": true,
+    "is_mouth_open": false
+  }
+}

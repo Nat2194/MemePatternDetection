@@ -1,11 +1,39 @@
 {
+  "chut": {
+    "is_shushing": true
+  },
+  "please": {
+    "are_hands_clasped": true,
+    "is_shushing": false,
+    "right_ok_sign": false,
+    "right_is_pointing_up": false
+  },
+  "no": {
+    "right_is_pointing_up": true,
+    "are_eyebrows_lowered": true,
+    "is_smiling": false,
+    "is_shushing": false,
+    "are_hands_clasped": false,
+    "right_ok_sign": false,
+    "index_fingers_touching": false
+  },
+  "muscle": {
+    "is_flexing": true,
+    "right_ok_sign": false,
+    "index_fingers_touching": false,
+    "right_is_pointing_up": false,
+    "is_shushing": false,
+    "are_hands_clasped": false
+  },
   "furious": {
     "is_mouth_open": true,
     "left_is_fist": true,
     "right_is_fist": true,
     "right_ok_sign": false,
     "index_fingers_touching": false,
-    "right_is_pointing_up": false
+    "right_is_pointing_up": false,
+    "is_shushing": false,
+    "are_hands_clasped": false
   },
   "lollipop": {
     "left_is_fist": true,
@@ -13,56 +41,111 @@
     "is_smiling": true,
     "right_ok_sign": false,
     "index_fingers_touching": false,
-    "right_is_pointing_up": false
-  },
-  "angry": {
-    "is_smiling": false,
-    "is_mouth_open": false,
-    "right_ok_sign": false,
-    "index_fingers_touching": false,
     "right_is_pointing_up": false,
-    "are_eyebrows_lowered": true
+    "is_shushing": false,
+    "are_hands_clasped": false
   },
   "handsign": {
     "right_ok_sign": true,
     "index_fingers_touching": false,
-    "right_is_pointing_up": false
-  },
-  "nerd": {
-    "right_is_pointing_up": true,
-    "right_ok_sign": false,
-    "index_fingers_touching": false
+    "right_is_pointing_up": false,
+    "is_shushing": false,
+    "are_hands_clasped": false
   },
   "smart": {
     "index_fingers_touching": true,
     "right_ok_sign": false,
-    "right_is_pointing_up": false
+    "right_is_pointing_up": false,
+    "is_shushing": false,
+    "are_hands_clasped": false
+  },
+  "nerd": {
+    "right_is_pointing_up": true,
+    "are_eyebrows_lowered": false,
+    "right_ok_sign": false,
+    "index_fingers_touching": false,
+    "is_shushing": false,
+    "are_hands_clasped": false
+  },
+  "leaving": {
+    "is_looking_left": true,
+    "is_smiling": false,
+    "right_ok_sign": false,
+    "index_fingers_touching": false,
+    "right_is_pointing_up": false,
+    "is_shushing": false,
+    "are_hands_clasped": false
+  },
+  "smug": {
+    "is_looking_right": true,
+    "is_smiling": true,
+    "right_ok_sign": false,
+    "index_fingers_touching": false,
+    "right_is_pointing_up": false,
+    "is_shushing": false,
+    "are_hands_clasped": false
+  },
+  "holding_laugh": {
+    "are_eyes_closed": true,
+    "is_smiling": true,
+    "right_ok_sign": false,
+    "index_fingers_touching": false,
+    "right_is_pointing_up": false,
+    "is_shushing": false,
+    "are_hands_clasped": false
+  },
+  "sleepy": {
+    "are_eyes_closed": true,
+    "are_eyebrows_lowered": false,
+    "right_ok_sign": false,
+    "index_fingers_touching": false,
+    "right_is_pointing_up": false,
+    "is_shushing": false,
+    "are_hands_clasped": false
+  },
+  "angry": {
+    "is_smiling": false,
+    "is_mouth_open": false,
+    "are_eyebrows_lowered": true,
+    "right_ok_sign": false,
+    "index_fingers_touching": false,
+    "right_is_pointing_up": false,
+    "is_shushing": false,
+    "are_hands_clasped": false
   },
   "malicious": {
     "is_smiling": true,
     "are_eyebrows_lowered": true,
     "right_ok_sign": false,
     "index_fingers_touching": false,
-    "right_is_pointing_up": false
+    "right_is_pointing_up": false,
+    "is_shushing": false,
+    "are_hands_clasped": false
   },
   "ragebaiting": {
     "is_mouth_open": true,
     "are_eyebrows_raised": true,
     "right_ok_sign": false,
     "index_fingers_touching": false,
-    "right_is_pointing_up": false
+    "right_is_pointing_up": false,
+    "is_shushing": false,
+    "are_hands_clasped": false
   },
   "happy": {
     "is_mouth_open": true,
     "are_eyebrows_raised": false,
     "right_ok_sign": false,
     "index_fingers_touching": false,
-    "right_is_pointing_up": false
+    "right_is_pointing_up": false,
+    "is_shushing": false,
+    "are_hands_clasped": false
   },
   "inspecting": {
     "is_one_eyebrow_raised": true,
     "right_ok_sign": false,
     "index_fingers_touching": false,
-    "right_is_pointing_up": false
+    "right_is_pointing_up": false,
+    "is_shushing": false,
+    "are_hands_clasped": false
   }
 }

@@ -2,6 +2,7 @@
   "is_smiling": false,
   "is_mouth_open": false,
   "are_eyebrows_lowered": true,
+  "are_eyes_closed": false,
   "right_ok_sign": false,
   "index_fingers_touching": false,
   "right_is_pointing_up": false,

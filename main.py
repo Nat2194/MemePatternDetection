@@ -4,6 +4,7 @@ import math
 import os
 import json
 import importlib.util
+import collections
 
 # ==========================================
 # 1. DYNAMIC COMPONENT & DETECTOR LOADER
@@ -143,6 +144,10 @@ calibration_frames_collected = 0
 CALIBRATION_TARGET = 30
 brow_history, eye_history = [], []
 
+# Temporal Smoothing Variables
+meme_history = collections.deque(maxlen=5)
+stable_meme = None
+
 dynamic_brow_low, dynamic_brow_high, dynamic_eye_closed = 0.105, 0.135, 0.082
 BROW_RAISE_OFFSET, BROW_LOWER_OFFSET, EYE_CLOSED_OFFSET = 0.015, 0.005, 0.015
 
@@ -275,8 +280,21 @@ while True:
 
         if is_match:
             current_meme = meme_name
-            status_text = f"{current_meme.capitalize()} Detected!"
-            break
+            break  # We found the raw match for this single frame
+
+    # --- TEMPORAL SMOOTHING (DEBOUNCING) ---
+    # 1. Add the current frame's raw detection to our 5-frame history
+    meme_history.append(current_meme)
+
+    # 2. If the current raw detection has happened at least 3 times in the last 5 frames, lock it in!
+    if meme_history.count(current_meme) >= 3:
+        stable_meme = current_meme
+
+    # 3. Update the UI text based on the STABLE meme, not the raw one
+    if stable_meme:
+        status_text = f"{stable_meme.capitalize()} Detected!"
+    else:
+        status_text = "Tracking..."
 
     # --- DEBUG UI ---
     cv2.putText(
@@ -310,8 +328,10 @@ while True:
             y_bool += 25
 
     cv2.imshow("Meme Pattern Detector", frame)
-    if current_meme:
-        cv2.imshow("Matched Meme", memes[current_meme])
+
+    # Use the debounced stable_meme to trigger the image popup!
+    if stable_meme:
+        cv2.imshow("Matched Meme", memes[stable_meme])
     elif "default" in memes:
         cv2.imshow("Matched Meme", memes["default"])
     else:

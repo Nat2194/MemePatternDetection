@@ -144,8 +144,8 @@ calibration_frames_collected = 0
 CALIBRATION_TARGET = 30
 brow_history, eye_history = [], []
 
-# Temporal Smoothing Variables
-meme_history = collections.deque(maxlen=5)
+# Temporal Smoothing Variables (10-frame history)
+meme_history = collections.deque(maxlen=10)
 stable_meme = None
 
 dynamic_brow_low, dynamic_brow_high, dynamic_eye_closed = 0.105, 0.135, 0.082
@@ -283,11 +283,11 @@ while True:
             break  # We found the raw match for this single frame
 
     # --- TEMPORAL SMOOTHING (DEBOUNCING) ---
-    # 1. Add the current frame's raw detection to our 5-frame history
+    # 1. Add the current frame's raw detection to our 10-frame history
     meme_history.append(current_meme)
 
-    # 2. If the current raw detection has happened at least 3 times in the last 5 frames, lock it in!
-    if meme_history.count(current_meme) >= 3:
+    # 2. If the current raw detection has happened at least 7 times in the last 10 frames, lock it in!
+    if meme_history.count(current_meme) >= 7:
         stable_meme = current_meme
 
     # 3. Update the UI text based on the STABLE meme, not the raw one
